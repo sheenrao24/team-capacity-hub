@@ -440,8 +440,8 @@ def style_feasible(val):
 
 styled = (
     display_df.style
-    .applymap(style_priority, subset=["Priority"])
-    .applymap(style_feasible, subset=["Feasible"])
+    .map(style_priority, subset=["Priority"])
+    .map(style_feasible, subset=["Feasible"])
     .set_properties(**{
         "background-color": "#161b27",
         "color": "#c9d0dc",
